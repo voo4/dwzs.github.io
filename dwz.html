@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.2.min.js"></script>
+		<style type="text/css">
+			#irrames {
+				width: 100%;
+				height: 100vh;
+
+			}
+		</style>
+	</head>
+	<body>
+		<iframe id="irrames" frameborder="0" scrolling="no" src=""></iframe>
+		<script>
+			// 无后台版，短连接，强制访问网页，无视报毒网址
+			// 利用iframe 内置文档框架 实现
+			// 接裂变，接软件，接ios软件，更多完善功能找阿雄Q:1011550928 , 微信:Lix0777
+			// 加个好友,多条路.
+			load();
+			function getQueryVariable(variable) {
+				var query = window.location.search.substring(1);
+				var vars = query.split("&");
+				for (var i = 0; i < vars.length; i++) {
+					var pair = vars[i].split("=");
+					if (pair[0] == variable) {
+						return pair[1];
+					}
+				}
+				return (false);
+			}
+			function load(){
+				var dz=getQueryVariable('u');
+				var wz=decodeURIComponent(window.atob(dz));
+				$('#irrames').attr('src',wz);
+			}
+		</script>
+	</body>
+</html>
